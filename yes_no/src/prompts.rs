@@ -78,6 +78,39 @@ There are shadows dancing to the left, the right side is brightly lit.\n Do you 
     }
 }
 pub fn shadows() -> (){
-    println!("As you walk towards the dancing shadows, they start to move faster.");
+    println!("As you walk towards the dancing shadows, they start to move faster \n
+    seeming to move towards you as you got closer with shadowy arms thrashing at the empty air.");
+    println!("do you continue closer?");
 
+    if prompt(){
+        println!("Well that can't be good...");
+        notsogood();
+    }else{
+        maybebetter()
+    }
 }
+pub fn notsogood() -> (){
+    println!("Moving closer seems to trigger the shadows, the arms extend and reach out grasping your leg firmly.");
+    println!("Though just a shadow, there is clearly something solid about it.");
+    println!("Do you attack the shadow, or beg for your life?");
+    println!("yes= attack \n beg = beg \n obviously");
+
+    if prompt(){
+        attack()
+    }else{
+        beg()
+    }
+}
+pub fn maybebetter() -> (){
+    println!("this might be better");
+}
+pub fn attack() -> (){
+    println!("Being dummy thicc you aren't afraid of shit, \n
+    you smash the arm with your other foot, causing the shadow to recoil in agony.");
+    //need to fill out the rest of attack and beg fn, stopping here to test
+}
+pub fn beg() -> (){
+    println!("You beg like the little baby that you are, crying to the shadows that you want to be freed.\n
+    sadly the shadows can't hear so you die now.");
+}
+
